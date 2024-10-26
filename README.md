@@ -21,7 +21,7 @@ UPDATE:
 ~~~
 rm -rf
 ~~~
-them install again 
+then install again 
 
 
 

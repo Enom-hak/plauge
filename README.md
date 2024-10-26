@@ -21,3 +21,7 @@ UPDATE:
 ~~~
 rm -rf
 ~~~
+them install again 
+
+
+

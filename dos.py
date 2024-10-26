@@ -17,6 +17,10 @@ def attack(target, duration):
     print("Attack completed.")
 
 def main():
+    print ("WELCOME TO ENOMS DOSER")
+    print ("this is plauge DDos attacker")
+    print ("used to infect sites")
+    print ("anything you do is not the owners fault")
     target = input("Enter the target IP or website: ")
     duration = int(input("Enter the duration in minutes: "))
     

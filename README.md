@@ -2,8 +2,10 @@ educational purposes only
 
 I the owner of this tool dose not take responsibility for your actions
 
+for termux only
 
-INSTALL TERMUX:
+
+INSTALL:
 
 ~~~
 git clone https://github.com/Enom-hak/doser.git

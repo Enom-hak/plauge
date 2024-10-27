@@ -6,8 +6,19 @@ educational purposes only
 
 I the owner of this tool dose not take responsibility for your actions
 
-for termux only
+for <h3>termux only</h3>
 
+
+REQ:
+~~~
+apt update && apt upgrage
+~~~
+~~~
+pkg install python3
+~~~
+~~~
+pkg install git
+~~~
 
 INSTALL:
 

@@ -32,8 +32,11 @@ def attack(target, port, duration):
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')
-    print("WELCOME TO ENOMS DOSER") 
-    print("this is plague DDos attacker")
+print ("┏┓┓ ┏┓┳┳┏┓┏┓")
+print ("┃┃┃ ┣┫┃┃┃┓┣ ")
+print ("┣┛┗┛┛┗┗┛┗┛┗┛")
+    print("WELCOME TO plauge dos atacker") 
+    print("powered by enom")
     print("used to infect sites")
     print("anything you do is not the owners fault")
     target = input("Enter the target IP or website: ")

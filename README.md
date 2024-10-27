@@ -16,7 +16,7 @@ git clone https://github.com/Enom-hak/plauge.git
 ~~~
 USAGE:
 ~~~
-cd doser
+cd plauge
 ~~~
 ~~~
 python3 dos.py

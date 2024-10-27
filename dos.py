@@ -36,10 +36,10 @@ def attack(target, port, duration):
             ping = round((end - start) * 1000, 2)
             print(bcolors.OKGREEN + f"Successfully plagued {target}:{port}! 🤢🦠 attempting to destroy | Ping: {ping}ms")
         except Exception as e:
-            print(bcolors.FAIL + f"SERVER COULD BE DOWN: {e}")
+            print(bcolors.FAIL + f"IP/WEBSITE COULD BE FULLY INFECTED🟥: {e}")
         finally:
             s.close()
-    print(f"Attack ended on {target}:{port}.")
+    print(f"🟩Attack ended on {target}:{port}.")
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')

@@ -14,7 +14,7 @@ for termux only
 INSTALL:
 
 ~~~
-git clone https://github.com/Enom-hak/doser.git
+https://github.com/Enom-hak/plauge.git
 ~~~
 USAGE:
 ~~~

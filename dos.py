@@ -34,7 +34,7 @@ def attack(target, port, duration):
             s.recv(1024)
             end = time.time()
             ping = round((end - start) * 1000, 2)
-            print(bcolors.OKGREEN + f"Successfully plagued {target}:{port}! 🤢🦠 attempting to destroy | Ping: {ping}ms")
+            print(bcolors.OKGREEN + f"Successfully started to plague {target}:{port}! 🤢🦠 attempting to destroy | Ping: {ping}ms")
         except Exception as e:
             print(bcolors.FAIL + f"IP/WEBSITE COULD BE FULLY INFECTED🟥: {e}")
         finally:

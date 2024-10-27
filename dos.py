@@ -61,7 +61,8 @@ def main():
             thread = threading.Thread(target=attack, args=(target, port, duration))
             thread.start()
     except KeyboardInterrupt:
-        print("Attack stopped by user.")
+        os.system('clear' if os.name == 'posix' else 'cls')
+        print(bcolors.HEADER + "Attack stopped")
 
 if __name__ == "__main__":
     main()

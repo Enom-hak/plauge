@@ -32,9 +32,9 @@ def attack(target, port, duration):
 
 def main():
     os.system('clear' if os.name == 'posix' else 'cls')
-print ("┏┓┓ ┏┓┳┳┏┓┏┓")
-print ("┃┃┃ ┣┫┃┃┃┓┣ ")
-print ("┣┛┗┛┛┗┗┛┗┛┗┛")
+    print ("┏┓┓ ┏┓┳┳┏┓┏┓")
+    print ("┃┃┃ ┣┫┃┃┃┓┣ ")
+    print ("┣┛┗┛┛┗┗┛┗┛┗┛")
     print("WELCOME TO plauge dos atacker") 
     print("powered by enom")
     print("used to infect sites")

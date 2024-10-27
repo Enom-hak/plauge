@@ -34,9 +34,8 @@ python3 dos.py
 ~~~
 UPDATE:
 ~~~
-rm -rf plauge
+rm -rf plauge && git clone https://github.com/Enom-hak/plauge.git
 ~~~
-then install again 
 
 
 

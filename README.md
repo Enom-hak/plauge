@@ -11,7 +11,7 @@ for termux only
 INSTALL:
 
 ~~~
-https://github.com/Enom-hak/plauge.git
+git clone https://github.com/Enom-hak/plauge.git
 ~~~
 USAGE:
 ~~~

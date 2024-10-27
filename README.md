@@ -1,5 +1,5 @@
-<h1>PLAUGE</h1><p1>a open sourced ddos tool</p1>
-<button>powered by Enom</button>
+<h1>PLAUGE</h1><h4>a open sourced ddos tool</h4>
+<h5>powered by Enom</h5>
 
 educational purposes only
 

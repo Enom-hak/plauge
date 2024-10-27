@@ -34,7 +34,7 @@ python3 dos.py
 ~~~
 UPDATE:
 ~~~
-rm -rf
+rm -rf plauge
 ~~~
 then install again 
 

@@ -50,7 +50,7 @@ def main():
     print(bcolors.OKCYAN + "powered by enom")
     print(bcolors.OKCYAN + "used to infect sites")
     print(bcolors.WARNING + "anything you do is not the owners fault")
-    target = input("Enter the target IP or website: ")
+    target = input(bcolors.ENDC + "Enter the target IP or website: ")
     duration = int(input("Enter the duration in minutes: "))
     thread_count = int(input("Enter the number of threads to use(max for most sites 1000): "))
     
